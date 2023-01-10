@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 
+import { Sidebar, Videos } from '../utils/componentsLinks';
+
 const Feed = () => {
   return (
     <Stack sx={{ flexDirection: { sx: 'column', md: 'row' } }}>
@@ -11,6 +13,7 @@ const Feed = () => {
           px: { sx: 0, md: 2 },
         }}
       >
+        <Sidebar />
         <Typography
           className="copyright"
           variant="body2"
@@ -18,6 +21,20 @@ const Feed = () => {
         >
           Copyright 2023 ELA Media
         </Typography>
+      </Box>
+
+      <Box p={2} sx={{ overflow: 'auto', height: '90vh', flex: '2' }}>
+        <Typography
+          variant="h4"
+          fontWeight="700"
+          mb={2}
+          sx={{ color: 'white' }}
+        >
+          New
+          <span style={{ color: '#F31503' }}> Videos</span>
+        </Typography>
+
+        <Videos />
       </Box>
     </Stack>
   );

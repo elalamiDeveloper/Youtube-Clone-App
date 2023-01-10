@@ -7,7 +7,7 @@ import {
   VideoDetail,
   ChannelDetail,
   SearchFeed,
-} from './components/componentsLinks';
+} from './utils/componentsLinks';
 
 const App = () => (
   <Box sx={{ background: '#000' }}>
